@@ -11,19 +11,37 @@ that TFMs and LLMs can be effectively integrated while minimizing information lo
   <img src="figures/time2lang.png" alt="Project Screenshot"/>
 </div>
 
-## How to use 
+## :chart_with_upwards_trend: How to use 
 
-**Installation**
+### Installation
+Follow these steps to setup your working environment and install the required packages. 
 
-**Training**
+Create a conda environment.
+```
+conda create -n time2lang python==3.10
+```
+Activate the environment.
+```
+conda activate time2lang.
+```
+Install the required packages
+```
+pip install -r requirements.txt
+```   
 
+### Training
+To train the model to predict periodicity, first download the synthetic data from [Zenodo](https://zenodo.org/records/14901681)
+and save in the ```data``` folder. Each .p file consists of a dictionary with two keys ```features``` and ```labels```. Train the model using the 
+following command:
 ``` 
 python train.py --gpu 2 --batch_size 16 --epochs 10 --save_dir "save_models" --model_name "time2lang" 
 ```
 
-**Feature Extraction**
+If you would like to train a multi-class classification model using your own data, create a dictionary with ```features``` and ```labels``` with the same names as above or modify the paths. 
 
-To
+### Feature Extraction
+
+The features can be extracted from the pre-trained models using sections (a) and (b) in the ```example_feature_extraction.ipynb``` 
 
 ## Citation
 
