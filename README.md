@@ -22,7 +22,7 @@ conda create -n time2lang python==3.10
 ```
 Activate the environment.
 ```
-conda activate time2lang.
+conda activate time2lang
 ```
 Install the required packages
 ```
